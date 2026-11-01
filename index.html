@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Parrot Logistics | Drive With Us</title>
-    <meta name="description" content="Green Parrot Logistics is hiring company drivers. Earn 0.75 cents per mile with consistent weekly pay.">
-    <!-- Povezivanje sa eksternim stilom -->
+    <meta name="description"
+        content="Green Parrot Logistics is hiring company drivers. Earn 0.75 cents per mile with consistent weekly pay.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="top">
 
-    <!-- STICKY NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
             <a class="nav-logo" href="index.html" aria-label="Refresh page">
                 <img src="images/logo.png" alt="Green Parrot Logistics">
             </a>
             <div class="nav-links">
-                <a href="#about" class="nav-item">About Us</a>
+                <a href="#about" class="nav-item">About</a>
                 <a href="#contact" class="nav-item">Contact</a>
                 <a href="#apply" class="nav-item nav-btn-apply">Apply</a>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SEKCIJA -->
     <section class="hero">
-        
-        <!-- Gornji/Levi deo: Slika, Naslov i Cena po milji -->
+
         <div class="hero-top">
             <div class="logo-container">
                 <span class="logo-icon">🦜</span>
@@ -40,9 +39,9 @@
             <div class="hero-headlines">
                 <p class="subtitle-green">Now Hiring Company Drivers</p>
                 <h1 class="main-title">Drive<br>With<br>Us</h1>
-                
+
                 <div class="divider-line"></div>
-                
+
                 <div class="hero-stat">
                     <span class="stat-number-big">0.75</span>
                     <span class="stat-label-box">Cents<br>Per Mile</span>
@@ -50,61 +49,66 @@
             </div>
         </div>
 
-        <!-- Donji/Desni deo: Web3Forms Mobilna Forma -->
+
         <div id="apply" class="form-section">
             <p class="section-tag">Apply</p>
             <h2>Start Your Application</h2>
-            <p class="form-instruction">Fill out the form. Our dispatch team will call you back almost immediately</p>
+            <p class="form-instruction">
+                Fill out the form. Our dispatch team will call you back almost immediately.
+            </p>
 
-            <form action="https://web3forms.com" method="POST">
-                
-                <!-- VAŽNO: Ovde nalepite svoj Access Key koji dobijete besplatno na web3forms.com -->
-                <input type="hidden" name="access_key" value="TVOJ-WEB3FORMS-ACCESS-KEY-OVDE">
+            <form action="https://api.web3forms.com/submit" method="POST" id="application-form">
 
-                <!-- Polje za Ime -->
+                <input type="hidden" name="access_key" value="edcb4d15-f6a9-485a-b924-3b7daf0425a6">
+
+                <input type="hidden" name="subject" value="New Driver Application - Green Parrot Logistics">
+
                 <div class="form-group">
                     <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="First Name" placeholder="JOHN" required>
+                    <input type="text" id="first_name" name="First Name" placeholder="" required>
                 </div>
 
-                <!-- Polje za Prezime -->
                 <div class="form-group">
                     <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="Last Name" placeholder="DOE" required>
+                    <input type="text" id="last_name" name="Last Name" placeholder="" required>
                 </div>
 
-                <!-- Polje za Broj telefona -->
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="Phone Number" placeholder="+1 (305) 555-0199" required>
+
+                    <div class="phone-input-wrapper">
+                        <span class="phone-prefix">+1</span>
+
+                        <input type="tel" id="phone" placeholder="10-digit phone number" inputmode="numeric"
+                            autocomplete="tel-national" minlength="10" maxlength="10"
+                            pattern="[2-9][0-9]{2}[2-9][0-9]{6}" required>
+                    </div>
+
+                    <input type="hidden" name="Phone Number" id="phone-full">
                 </div>
 
-                <!-- Honeypot zaštita od spama -->
-                <input type="checkbox" name="botcheck" class="hidden-field" style="display: none;">
+                <input type="checkbox" name="botcheck" class="hidden-field" style="display:none;">
 
-                <!-- Dugme za slanje -->
                 <button type="submit" class="btn-submit">
                     <span>Apply Now</span>
                     <span>→</span>
                 </button>
+
             </form>
         </div>
     </section>
 
 
-   
 
-    <!-- ABOUT US / DRIVERS SEKCIJA -->
     <section id="about" class="about-section">
         <p class="section-tag">About Us</p>
-        <h2>Built By Drivers,<br>For Drivers.</h2>
+        <h2>Commitment to the Road,<br>Dedication to Our Drivers.</h2>
         <p class="about-text">
-            Green Parrot Logistics is a cargo & freight company moving loads across the lower 48. 
-            We run a tight operation with modern Freightliner Cascadia equipment, strong dispatch support, 
-            and consistent weekly pay. If you want miles and respect — this is your home.
+            Green Parrot Logistics INC is a U.S.-based trucking company specializing in freight transportation. With
+            modern Freightliner Cascadia trucks, dependable dispatch support, and consistent weekly pay, we focus on
+            keeping drivers moving and delivering results.
         </p>
 
-        <!-- Specifikacije -->
         <div class="spec-list">
             <div class="spec-item">
                 <span class="spec-value">0.75</span>
@@ -122,7 +126,7 @@
                 <span class="spec-value">Flex</span>
                 <span class="spec-label">Flexible Miles</span>
             </div>
-             <div class="spec-item">
+            <div class="spec-item">
                 <span class="spec-value">2+</span>
                 <span class="spec-label">Years Experience Required</span>
             </div>
@@ -135,59 +139,72 @@
 
 
 
-         <!-- CONTACT SEKCIJA -->
     <section id="contact" class="contact-section">
         <p class="section-tag">Contact</p>
         <h2>Get In Touch</h2>
 
-        <!-- Poziv dispičeru -->
-        <a href="tel:+13055091198" class="contact-link-card">
+        <div class="contact-link-card">
             <div class="contact-info-left">
-                <span class="contact-label">Call Dispatch</span>
+                <span class="contact-label">Phone</span>
                 <span class="contact-value">+1 305-509-1198</span>
             </div>
-            <span class="contact-arrow">→</span>
-        </a>
+        </div>
 
-        <!-- Slanje mejla -->
-        <a href="mailto:rasko@parrotlogisticcs.com" class="contact-link-card">
+        <div class="contact-link-card">
             <div class="contact-info-left">
-                <span class="contact-label">Email Us</span>
+                <span class="contact-label">Email</span>
                 <span class="contact-value">rasko@parrotlogistics.com</span>
             </div>
-            <span class="contact-arrow">→</span>
-        </a>
+        </div>
     </section>
 
 
 
+    <dialog id="success-popup" class="success-popup">
+        <div class="success-popup-content">
 
-    <!-- FOOTER -->
+            <button type="button" class="popup-close" id="popup-close" aria-label="Close notification">
+                &times;
+            </button>
+
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+            </div>
+
+            <h2>Application Submitted!</h2>
+
+            <p>
+                Thank you for your interest in Green Parrot Logistics INC.
+                Your application has been successfully submitted.
+                Our team will review your information and contact you soon.
+            </p>
+
+            <button type="button" class="popup-ok-button" id="popup-ok">
+                OK
+            </button>
+
+        </div>
+    </dialog>
+
+
+
     <footer>
         <div class="footer-logo">
             <img src="images/logo.png" alt="Green Parrot Logistics">
         </div>
-        <p class="footer-copy">© 2026 Green Parrot Logistics. All rights reserved.</p>
+        <p class="footer-copy">© 2026 Green Parrot Logistics INC. All rights reserved.</p>
     </footer>
 
 
-    <!-- SCROLL TO TOP -->
-    <button id="scrollToTop" class="scroll-to-top" type="button"
-            aria-label="Scroll to top" title="Scroll to top">
+    <button id="scrollToTop" class="scroll-to-top" type="button" aria-label="Scroll to top" title="Scroll to top">
         ↑
     </button>
 
-    <script>
-        const scrollToTopButton = document.getElementById('scrollToTop');
-
-        window.addEventListener('scroll', () => {
-            scrollToTopButton.classList.toggle('visible', window.scrollY > 180);
-        });
-
-        scrollToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
